@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       // Await the Axios POST request so that the response is correctly handled
-      const res = await axios.post('http://localhost:5000/api/login', { username, password });
+      const res = await axios.post('https://syncthreads-backend.onrender.com/api/login', { username, password });
       login(res.data.token, username);
       navigate('/dashboard');
     } catch (err) {

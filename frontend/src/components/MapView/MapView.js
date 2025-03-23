@@ -16,7 +16,7 @@ const MapView = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/mapview/${cardId}`, {
+    axios.get(`https://syncthreads-backend.onrender.com/api/mapview/${cardId}`, {
       headers: { 'Authorization': `Bearer ${auth.token}` }
     })
       .then((res) => {

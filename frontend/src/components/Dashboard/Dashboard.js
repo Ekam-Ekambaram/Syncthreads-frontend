@@ -10,7 +10,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/dashboard', {
+    axios.get('https://syncthreads-backend.onrender.com/api/dashboard', {
       headers: { 'Authorization': `Bearer ${auth.token}` }
     })
       .then((res) => {
